@@ -1,1 +1,15 @@
-<h1>Home Page</h1>
+<h1>Forex BR</h1>
+<br>
+<% if user_signed_in? %>
+    <%= link_to "Meu perfil", user_profile_path %>
+<% elsif admin_signed_in? %>
+    <%= link_to "Admin", admin_profile_path %>
+<% else %>
+    <%= link_to "Log in", new_user_session_path %>
+    <br>
+    <%= link_to "Sign up", new_user_registration_path %>
+    <br>
+    <%= link_to "ADMIN Log in", new_admin_session_path %>
+    <br>
+    <%= link_to "ADMIN Sign up", new_admin_registration_path %>
+<% end %>
