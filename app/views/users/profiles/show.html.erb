@@ -1,0 +1,16 @@
+<h3><%= @user.first_name %> <%= @user.last_name %></h3>
+<p>Saldo BRL: <%= @user.first_name %></p>
+<p>Saldo USD: <%= @user.first_name %></p>
+<p>Saldo EUR: <%= @user.first_name %></p>
+<p>Form para add money para um dos 3 balances com dropdown pra escolher currency e campo para valor</p>
+<br>
+<p>Obs.: apenas placeholder - a ideia é que apenas usuários Admin possam add money.</p>
+<br>
+<%= link_to "Atualizar perfil", edit_user_registration_path, class: 'text-link' %>
+<br>
+<%= link_to "Sair", destroy_user_session_path, data: {turbo: false}, class: 'text-link' %>
+<br>
+<%= link_to "Voltar", :back, class: 'text-link' %>
+<br>
+<%= link_to "Página inicial", root_path, class: 'text-link' %>
+<p>Insatisfeito? <%= button_to "Cancelar minha conta", registration_path(current_user), data: { confirm: "Tem certeza?" }, method: :delete %></p>
