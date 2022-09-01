@@ -1,0 +1,21 @@
+.alert {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 1000;
+    background-color: $red;
+    padding: 4px;
+    color: $white;
+    border-radius: 2px;
+}
+
+.notice {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 1000;
+    background-color: $green;
+    padding: 4px;
+    color: $white;
+    border-radius: 2px;
+}

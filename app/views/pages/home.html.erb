@@ -1,15 +1,17 @@
-<h1>Forex BR</h1>
-<br>
-<% if user_signed_in? %>
-    <%= link_to "Meu perfil", user_profile_path %>
-<% elsif admin_signed_in? %>
-    <%= link_to "Admin", admin_profile_path %>
-<% else %>
-    <%= link_to "Log in", new_user_session_path %>
-    <br>
-    <%= link_to "Sign up", new_user_registration_path %>
-    <br>
-    <%= link_to "ADMIN Log in", new_admin_session_path %>
-    <br>
-    <%= link_to "ADMIN Sign up", new_admin_registration_path %>
-<% end %>
+<div class="main-content">
+    <div class="sign-up">
+        <h1>Forex BR</h1>
+        <h3>Currency exchange made easy!</h3>
+        <% if user_signed_in? %>
+            <%= link_to "Meu perfil", user_profile_path %>
+        <% elsif admin_signed_in? %>
+            <%= link_to "Admin", admin_profile_path %>
+        <% else %>
+            <%= link_to "Sign up", new_user_registration_path, class: "btn-primary" %>
+            <%= link_to "Log in", new_user_session_path, class: "text-link" %>
+        <% end %>
+    </div>
+    <div>
+        <h1>PLACEHOLDER PARA CALCULADORA</h1>
+    </div>
+</div>
