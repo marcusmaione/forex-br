@@ -1,34 +1,34 @@
 <div class="form-box">
-    <h5>Crie sua conta:</h5>
+    <h5>Create your profile:</h5>
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: {turbo: false}) do |f| %>
         <%= f.error_notification %>
         <%= f.input :first_name,
                     autofocus: true,
                     required: true,
-                    :label => "Nome:" %>
+                    :label => "First name:" %>
         <%= f.input :last_name,
                     required: true,
-                    :label => "Sobrenome:" %>
+                    :label => "Last name:" %>
         <%= f.input :email,
                     required: true,
                     input_html: { autocomplete: "email" },
                     :label => "Email:" %>
         <%= f.input :password,
                     required: true,
-                    hint: ("Mínimo de #{@minimum_password_length} caracteres"),
+                    hint: ("#{@minimum_password_length} minimum characters"),
                     input_html: { autocomplete: "new-password" },
-                    :label => "Crie uma senha:" %>
+                    :label => "Create password:" %>
         <%= f.input :password_confirmation,
                     required: true,
                     input_html: { autocomplete: "new-password" },
-                    :label => "Confirmar senha:" %>
+                    :label => "Confirm password:" %>
 
         <div class="form-actions">
-            <%= f.submit class: 'btn-primary', value: "Confirmar" %>
+            <%= f.submit class: 'btn-primary', value: "Submit" %>
         </div>
     <% end %>
 
-    <p>Já tem uma conta?</p>
-    <%= link_to "Entrar", new_user_session_path, class: 'text-link' %>
-    <%= link_to "Voltar", :back, class: 'text-link' %>
+    <p>Already have an account?</p>
+    <%= link_to "Log in", new_user_session_path, class: 'text-link' %>
+    <%= link_to "Back", :back, class: 'text-link' %>
 </div>

@@ -1,37 +1,37 @@
 <div class="form-box">
-    <h5>Atualize sua conta:</h5>
+    <h5>Update your account:</h5>
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: {turbo: false}, html: { method: :put }) do |f| %>
         <%= f.error_notification %>
         <%= f.input :first_name,
                     autofocus: true,
                     required: true,
-                    :label => "Nome:" %>
+                    :label => "First name:" %>
         <%= f.input :last_name,
                     required: true,
-                    :label => "Sobrenome:" %>
+                    :label => "Last name:" %>
         <%= f.input :email,
                     required: true,
                     input_html: { autocomplete: "email" },
                     :label => "Email:" %>
         <%= f.input :password,
                     required: true,
-                    hint: ("Deixe em branco caso não queira alterar a senha; mínimo de #{@minimum_password_length} caracteres"),
+                    hint: ("Leave blank if you don't want to change it; #{@minimum_password_length} minimum characters"),
                     input_html: { autocomplete: "new-password" },
-                    :label => "Criar nova senha:" %>
+                    :label => "Create new password:" %>
         <%= f.input :password_confirmation,
                     required: true,
                     input_html: { autocomplete: "new-password" },
-                    :label => "Confirmar nova senha:" %>
+                    :label => "Confirm new password:" %>
         <%= f.input :current_password,
                     required: true,
-                    hint: ("Precisamos da senha atual para confirmar as mudanças"),
+                    hint: ("We need your current password to confirm your changes"),
                     input_html: { autocomplete: "current-password" },
-                    :label => "Senha atual:" %>
+                    :label => "Current password:" %>
 
         <div class="form-actions">
-            <%= f.submit class: 'btn-primary', value: "Confirmar" %>
+            <%= f.submit class: 'btn-primary', value: "Submit" %>
         </div>
     <% end %>
     <br>
-    <%= link_to "Voltar", :back, class: 'text-link' %>
+    <%= link_to "Back", :back, class: 'text-link' %>
 </div>

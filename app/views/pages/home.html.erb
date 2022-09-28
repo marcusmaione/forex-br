@@ -2,15 +2,15 @@
     
     <div class="sign-up">
         <h1>Forex BR</h1>
-        <h3>Câmbio fácil como você nunca viu!</h3>
         <% if user_signed_in? %>
-            <%= link_to "Meu perfil", user_profile_path, class: "btn-primary" %>
+            <%= link_to "My profile", user_profile_path, class: "btn-primary" %>
         <% elsif admin_signed_in? %>
             <%= link_to "Admin", admin_profile_path, class: "btn-primary" %>
         <% else %>
-            <%= link_to "Cadastrar", new_user_registration_path, class: "btn-primary" %>
-            <%= link_to "Entrar", new_user_session_path, class: "text-link" %>
+            <%= link_to "Sign up", new_user_registration_path, class: "btn-primary" %>
+            <%= link_to "Log in", new_user_session_path, class: "text-link" %>
         <% end %>
+        <h3>Currency calculator</h3>
     </div>
     
     <%= render 'calculator' %>
